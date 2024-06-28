@@ -1,27 +1,20 @@
 import { Cliente } from "./Cliente.js";
 import { ContaCorrente } from "./ContaCorrente.js";
+import { ContaPoupanca } from "./ContaPoupanca.js";
+import { Conta } from "./Conta.js";
 
-//clientes
-//conta corrente
+//CLIENTES
 
 const cliente1 = new Cliente("Leonardo", 1238481051);
-const contaCliente1 = new ContaCorrente(cliente1, 101);
+const conta1 = new ContaCorrente(cliente1, 101);
 
 const cliente2 = new Cliente("Giovanni", 666666666);
-const contaCliente2 = new ContaCorrente(cliente2, 202);
+const conta2 = new ContaCorrente(cliente2, 202);
 
 const cliente3 = new Cliente("Roberto", 999999999);
-const contaCorrente3 = new ContaCorrente(cliente3, 303);
+const conta3 = new ContaCorrente(cliente3, 303);
 
-//depositos
+const cliente4 = new Cliente("Patricia", 888888888);
+const conta4 = new ContaPoupanca(100, cliente4, 404);
 
-contaCliente1.depositar(100);
-contaCliente2.depositar(100);
-
-//saques
-
-//transferencias
-
-contaCliente2.transferir(50, contaCliente1);
-//console.log(ContaCorrente.numeroDeContas);  //Comando para ver o nuemro de contas
-console.log(cliente1);
+console.log(conta1);
