@@ -17,4 +17,11 @@ const conta3 = new ContaCorrente(cliente3, 303);
 const cliente4 = new Cliente("Patricia", 888888888);
 const conta4 = new ContaPoupanca(100, cliente4, 404);
 
-console.log(conta1);
+const cliente5 = new Conta(0, cliente1, 505)
+
+
+conta1.depositar(100)
+conta1.sacar(20)
+conta4.depositar(100)
+conta4.sacar(10)
+console.log(conta1)

@@ -3,27 +3,23 @@ export class Conta {
     this._saldo = saldoInicial;
     this._cliente = cliente;
     this._agencia = agencia;
+    if (this.constructor == Conta)
+      console.log("Nao foi possivel")
+
   }
 
   sacar(valor) {
-    let taxa = 1;
-    if (this._tipo == "corrente") {
-      taxa = 1.1;
-    }
-
-    const valorSacado = taxa * valor;
-
-    if (this.saldo >= valorSacado) {
-      this._saldo -= valorSacado;
-      return valorSacado;
+    if (this._saldo >= valor) {
+      this._saldo -= valor;
+      return valor;
     }
   }
-  
+
   depositar(valor) {
     if (valor <= 0) {
       return;
-      //console.log(this._saldo) // saldo privado só mostra se colocar console dentro da classe
     }
+
     this._saldo += valor; // this.saldo = this saldo + valor
     return valor;
   }
